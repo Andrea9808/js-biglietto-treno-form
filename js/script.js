@@ -1,14 +1,5 @@
 //calcolo biglietto treno
 
-
-
-
-
-
-
-
-
-
 //prezzo del biglietto
 
 
@@ -42,13 +33,13 @@ buttonGen.addEventListener(`click`,
 
         // sconto
 
-        if(age == "min") {
+        if(age === "min") {
             let discount = (price * 20)/ 100;
             total = price - discount;
             offerta = "Biglietto scontato del 20%"
             console.log ("Con Sconto: " + total + "€");
            
-        }else if (age == "over"){
+        }else if (age === "over"){
             let discount = (price * 40)/ 100;
             total = price - discount;
             offerta = "Biglietto scontato del 40%"
@@ -56,6 +47,7 @@ buttonGen.addEventListener(`click`,
         
         }else{
             total = price;
+            offerta = "Biglietto Standard"
             console.log ("Senza sconto: " + total + "€");
         };
 
@@ -70,12 +62,35 @@ buttonGen.addEventListener(`click`,
         document.getElementById('city').innerHTML = "Grottaglie (TA)";
 
 
+
+        let boardingPass = document.getElementById('boarding-pass');
+        boardingPass.classList.remove('d-none');
+        
+
     }
 
-)
+);
+
+
+let buttonNull = document.getElementById("buttonnull");
+buttonNull.addEventListener(`click`,
+
+    function () {
+        
+        document.getElementById(`passenger`).innerHTML = "";
+        document.getElementById('offerta').innerHTML = "";
+        document.getElementById('carrozza').innerHTML = "";
+        document.getElementById('codice_cp').innerHTML = "";
+        document.getElementById('costo_biglietto').innerHTML = "";
+        document.getElementById('city').innerHTML = "";
+
+       
+        
+        let boardingPass = document.getElementById('boarding-pass');
+        boardingPass.classList.add('d-none');
+    }
+
+);
 
 
 
-// output con sole due cifre
-
-// document.getElementById('title').innerHTML = 'Il costo del tuo biglietto è di: ' + parseFloat(total).toFixed(2) + '€';

@@ -39,7 +39,7 @@ input,#age{
 }
 
 /* STILI BIGLIETTO */
-.box_details{
+#box_details{
     border: 6px solid white;
     border-radius: 10px;
     background-color: white;
@@ -52,5 +52,11 @@ input,#age{
 }
 
 th{
-    padding-right: 60px;
+    padding-right: 50px;
 }
+
+
+.offer{
+    padding-right: 40px;
+}
+
