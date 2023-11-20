@@ -20,21 +20,22 @@ buttonGen.addEventListener(`click`,
 
     function(){
 
-        // nome e cognome passeggero
+        // età passeggero
         const userAge = document.getElementById("age");
         let age = userAge.value;
         console.log(age);
 
-        // età passeggero
+        // nome e cognome passeggero
         const userName = document.querySelector(".name");
         let name = userName.value;
-        console.log(userName);
+        console.log(name);
 
         // numero di chilometri
         const userKm = document.querySelector(".km");
         let km = parseInt(userKm.value);
         console.log(km);
 
+        // prezzo
         let price = 0.21 * km;
         console.log(price);
 
@@ -42,19 +43,30 @@ buttonGen.addEventListener(`click`,
         // sconto
 
         if(age == "min") {
-            let discountTwenty = (price * 20)/ 100;
-            total = price - discountTwenty;
+            let discount = (price * 20)/ 100;
+            total = price - discount;
+            offerta = "Biglietto scontato del 20%"
             console.log ("Con Sconto: " + total + "€");
-        
+           
         }else if (age == "over"){
-            let discountForty = (price * 40)/ 100;
-            total = price - discountForty;
+            let discount = (price * 40)/ 100;
+            total = price - discount;
+            offerta = "Biglietto scontato del 40%"
             console.log ("Con Sconto: " + total + "€");
         
         }else{
             total = price;
             console.log ("Senza sconto: " + total + "€");
         };
+
+        let carrozza = Math.floor(Math.random() * 10) +1;
+        let cp = Math.floor(Math.random() * 10000) +1;
+
+        document.getElementById(`passenger`).innerHTML = name;
+        document.getElementById('offerta').innerHTML = offerta;
+        document.getElementById('carrozza').innerHTML = carrozza;
+        document.getElementById('codice_cp').innerHTML = cp;
+        document.getElementById('costo_biglietto').innerHTML = total.toFixed(2) + "€";
 
 
     }

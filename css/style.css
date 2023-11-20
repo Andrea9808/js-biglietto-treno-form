@@ -1,0 +1,38 @@
+
+
+.box{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.calc_biglietto{
+    background-color: brown;
+}
+
+form{
+    background-image: url(../treni.webp);
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 200px;
+    box-shadow: 2px 2px 20px 2px;
+}
+
+/* BOTTON */
+#buttongen{
+    background-color: green;
+    color: white;
+}
+
+#buttonnull{
+    background-color: black;
+    color: white;
+}
+
+/* input */
+.name,.km {
+    width: 70%;
+}
+
+input,#age{
+    border-radius: 3px;
+}
