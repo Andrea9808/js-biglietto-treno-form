@@ -67,6 +67,7 @@ buttonGen.addEventListener(`click`,
         document.getElementById('carrozza').innerHTML = carrozza;
         document.getElementById('codice_cp').innerHTML = cp;
         document.getElementById('costo_biglietto').innerHTML = total.toFixed(2) + "€";
+        document.getElementById('city').innerHTML = "Grottaglie (TA)";
 
 
     }

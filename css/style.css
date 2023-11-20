@@ -5,13 +5,14 @@
     text-align: center;
 }
 
-.calc_biglietto{
+body{
     background-color: brown;
 }
 
 form{
     background-image: url(../treni.webp);
     background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
     padding-top: 200px;
     box-shadow: 2px 2px 20px 2px;
@@ -35,4 +36,21 @@ form{
 
 input,#age{
     border-radius: 3px;
+}
+
+/* STILI BIGLIETTO */
+.box_details{
+    border: 6px solid white;
+    border-radius: 10px;
+    background-color: white;
+    padding: 34px 0px;
+}
+
+.ticket{
+    background-color: black;
+    height: 100%;
+}
+
+th{
+    padding-right: 60px;
 }
