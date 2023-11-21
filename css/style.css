@@ -9,7 +9,7 @@ body{
     background-color: brown;
 }
 
-form{
+.form{
     background-image: url(../treni.webp);
     background-size: cover;
     background-repeat: no-repeat;
